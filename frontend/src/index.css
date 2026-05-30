@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030611;
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(10, 16, 36, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(13, 21, 48, 0.6);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15), 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+}
+
+/* Radiant glow background spots */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.glow-orb-primary {
+  background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+}
+
+.glow-orb-secondary {
+  background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030611;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Glow Borders */
+.glow-border-cyan {
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.glow-border-violet {
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+/* Neon buttons */
+.btn-neon-violet {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-neon-violet:hover {
+  box-shadow: 0 6px 20px 0 rgba(139, 92, 246, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-neon-cyan {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-neon-cyan:hover {
+  box-shadow: 0 6px 20px 0 rgba(6, 182, 212, 0.6);
+  transform: translateY(-1px);
+}
+
+/* AI Pulse Dot */
+.ai-pulse-dot {
+  position: relative;
+}
+
+.ai-pulse-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: inherit;
+  border-radius: 50%;
+  animation: pulse-out 1.5s infinite ease-out;
+}
+
+@keyframes pulse-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
