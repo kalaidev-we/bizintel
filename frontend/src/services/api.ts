@@ -1,7 +1,7 @@
 const API_BASE_URL = typeof window !== "undefined" &&
   (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
   ? "http://127.0.0.1:8000/api"
-  : "/api";
+  : "https://bizintel-36jp.vercel.app/api";
 
 function getHeaders() {
   const token = localStorage.getItem("bizintel_token");
